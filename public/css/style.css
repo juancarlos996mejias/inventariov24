@@ -1,0 +1,76 @@
+html{
+    height: 100%;
+}
+
+.login{
+    margin-right: 30px;
+}
+
+.login img{
+    width:25px;
+    height:25px;
+}
+
+.registro{
+    margin-right: 50px;
+}
+
+.registro img{
+    width:25px;
+    height:25px;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: #040D12;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.logoHome{
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ margin-top: 70px;
+}
+
+#logoBlue img{
+  height: 40px;
+  width: 20px;
+}
+
+
+.qr img{
+   
+    margin-left: 45%;
+    height: 90px;
+    width: 70px;
+}
+
+.home img{
+margin-right: 40px;
+width:30px;
+height:27px;
+}
+
+#pañol img{
+height: 40px;
+}
+
+#navbarDropdown{
+    color:white;
+}
+
+.dropdown-toggle{
+    color:white; 
+}
+
+
+
+
+
+
