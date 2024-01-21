@@ -1,6 +1,11 @@
 
 @extends('adminlte::page')
 
+@section('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+@endsection
+
 @section('template_title')
     Product
 @endsection
@@ -32,9 +37,9 @@
                     @endif
 
                     <div class="card-body">
-                        <div class="table-responsive text-center ">
-                            <table class="table table-striped table-hover ">
-                                <thead class="thead thead-dark">
+                    <table class="table table-striped table-hover" >
+                            <table class="table table-striped table-hover"id= "panol">
+                                <thead class="thead table-secondary">
                                     <tr>
                                     <th>Id</th>
                                         <th>Fecha</th>
@@ -67,6 +72,7 @@
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('') }}</button>
                                                 </form>
                                             </td>
+                                            <td></td>
                                         </tr>
                                     @endforeach
                                     
@@ -82,4 +88,15 @@
         </div>
     </div>
     
+@endsection
+
+@section('js')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    new DataTable('#panol');
+</script>
+
 @endsection

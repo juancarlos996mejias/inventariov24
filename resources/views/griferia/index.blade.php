@@ -1,6 +1,13 @@
 @extends('adminlte::page')
 
+@section('css')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+@endsection
+
 @section('content')
+
+
 <br>
 
     <div class="container-fluid mt-4">
@@ -29,16 +36,16 @@
 
 
 
-<div class="card-body">
-    <div class="table-responsive text-center ">
-        <table class="table table-striped table-hover ">
-            <thead class="thead thead-dark">
+<div class="card-body ">
+    <div class="table-responsive">
+        <table class="table table-striped table-hover text-center" id= "griferia">
+            <thead class="table-secondary text-center">
                 <tr>
-                    <th>Id</th>
+                
                     <th>Código</th>
                     <th>Artículo</th>
                     <th>Marca</th>
-                    <th>Stock Total</th>
+                    <th>Stock</th>
                     <th>Talar</th>
                     <th>Outlet</th>
                     <th>Quilmes</th>
@@ -53,25 +60,19 @@
             <tbody>
                 @foreach ($griferias as $griferia)
                 <tr>
-
-
-                    <td>{{ $griferia->id}}</td>
+               
+                
                     <td>{{ $griferia->codigo}}</td>
                     <td>{{ $griferia->articulo}}</td>
                     <td>{{ $griferia->marca}}</td>
-                    <td>{{ $griferia->stockTotal}}</td>
+                    <td>{{ $griferia->stockotal}}</td>
                     <td>{{ $griferia->almacenTalar}}</td>
                     <td>{{ $griferia->almacenOutlet}}</td>
                     <td>{{ $griferia->almacenQuilmes}}</td>
+                    <td>{{ $griferia->accion}}</td>
                     <td>
 
-                        <form class="d-flex justify-content-around" action="{{ route('griferia.destroy',$griferia->id) }}" method="POST">
-                            <a class="btn btn-sm btn-primary " href="{{ route('griferia.show',$griferia->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('') }}</a>
-                            <a class="btn btn-sm btn-success" href="{{ route('griferia.edit',$griferia->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('') }}</a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('') }}</button>
-                        </form>
+                       
 
                     </td>
 
@@ -90,5 +91,16 @@
 </div>
 </div>
 
+
+@endsection
+
+@section('js')
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    new DataTable('#griferia');
+</script>
 
 @endsection

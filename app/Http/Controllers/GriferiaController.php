@@ -34,7 +34,7 @@ return view('griferia.index', ['griferias' => $griferias]); // Retorna la vista 
    {
        request()->validate(Griferia::$rules);
 
-       $griferia = Griferia::create($request->all());
+       $griferias = Griferia::create($request->all());
 
        return redirect()->route('griferias.index')
            ->with('success', 'Product created successfully.');
@@ -45,7 +45,7 @@ return view('griferia.index', ['griferias' => $griferias]); // Retorna la vista 
     */
    public function show(string $id)
    {
-       $griferia = Griferia::find($id);
+       $griferias = Griferia::find($id);
 
        return view('griferia.show', compact('griferia'));
    }
@@ -55,7 +55,7 @@ return view('griferia.index', ['griferias' => $griferias]); // Retorna la vista 
     */
    public function edit(string $id)
    {
-       $griferia = Griferia::find($id);
+       $griferias = Griferia::find($id);
 
        return view('griferia.edit', compact('griferia'));
    }

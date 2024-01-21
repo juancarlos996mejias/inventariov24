@@ -35,7 +35,6 @@
                                 <thead class="thead thead-dark">
                                     <tr>
                                         <th>Id</th>
-                                        
 										<th>Código</th>
 										<th>Articulo</th>
 										<th>Lote</th>

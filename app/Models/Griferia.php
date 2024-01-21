@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Griferia extends Model
 {
   static $rules = [
-    'id' => 'required',
+    
     'codigo' => 'required',
     'articulo' => 'required',
     'marca' => 'required',
@@ -26,5 +26,5 @@ class Griferia extends Model
    *
      //* @var array
    */
-   protected $fillable = ['codigo','articulo','marca','stockTotal','almacenTalar','almacenOutlet','almacenQuilmes'];
+   protected $fillable = ['codigo','articulo','marca','stock_Total','almacen_Talar','almacen_Outlet','almacen_Quilmes'];
 }

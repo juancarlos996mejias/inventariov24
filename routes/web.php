@@ -64,6 +64,7 @@ Route::get('/griferia', [GriferiaController::class, 'index'])->name('griferia');
 
 
 
+
 /*Route::get('/panol',[App\Http\Controllers\PanolController::class,'index'])->name('panol');
 
 Route::get('/panols',[App\Http\Controllers\PanolController::class,'index'])->name('panol');

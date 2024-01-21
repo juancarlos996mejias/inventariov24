@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('griferias', function (Blueprint $table) {
-            $table->id();
+           
             $table->string('codigo');
             $table->text('articulo');
             $table->string('marca');
-            $table->string('stock total');
-            $table->string('almacen talar');
-            $table->string('almacen outlet');
-            $table->string('almacen quilmes');
+            $table->string('stock_total');
+            $table->string('almacen_talar');
+            $table->string('almacen_outlet');
+            $table->string('almacen_quilmes');
             $table->timestamps();
         });
     }
