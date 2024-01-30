@@ -52,7 +52,7 @@
                     <th>Acción</th>
 
 
-                    <th></th>
+                   
                 </tr>
             </thead>
 
@@ -70,11 +70,7 @@
                     <td>{{ $griferia->almacenOutlet}}</td>
                     <td>{{ $griferia->almacenQuilmes}}</td>
                     <td>{{ $griferia->accion}}</td>
-                    <td>
-
-                       
-
-                    </td>
+                    
 
                 </tr>
                 @endforeach
